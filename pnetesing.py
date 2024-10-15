@@ -2,9 +2,9 @@ import socket
 from scapy.all import ARP, Ether, srp
 import itertools
 
-# ------------------------
-# Port Scanner
-# ------------------------
+
+# port scanner
+
 def port_scanner(target_ip, ports):
     print(f"Scanning {target_ip} for open ports...")
     open_ports = []
@@ -22,9 +22,8 @@ def port_scanner(target_ip, ports):
     else:
         print(f"No open ports found on {target_ip}")
 
-# ------------------------
-# Network Mapper
-# ------------------------
+# network mapper
+
 def network_mapper(target_ip_range):
     print(f"Mapping network: {target_ip_range}")
     arp_request = ARP(pdst=target_ip_range)
@@ -43,9 +42,8 @@ def network_mapper(target_ip_range):
     else:
         print("No devices found in the network.")
 
-# ------------------------
-# Simple Brute-Force Password Guesser
-# ------------------------
+#simple bruteforce password guesser
+
 def password_guesser(target_ip, port, username, password_list):
     print(f"Attempting brute-force on {target_ip}:{port} with username: {username}")
     for password in password_list:
@@ -66,9 +64,9 @@ def password_guesser(target_ip, port, username, password_list):
     print("Password not found in the provided list.")
     return None
 ... 
-... # ------------------------
+
 ... # Main Function
-... # ------------------------
+
 """ ... if __name__ == "__main__":
 ...     # Example Usage
 ...     target_ip = "192.168.1.1"
@@ -85,9 +83,9 @@ def password_guesser(target_ip, port, username, password_list):
 ...     username = "admin"
 ...     password_list = ["123456", "password", "admin123", "root"]  # Modify as needed
 ...     port_to_test = 22  # Example: SSH port """
-# ------------------------
+
 # Main Function
-# ------------------------
+
 if __name__=="__main__":
     #example
     target_ip = "192.168.1.1"
